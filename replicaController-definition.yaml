@@ -15,6 +15,9 @@ spec:
         type: front-end
     spec:
       containers:
-      - name: nginx-controller
+      - name: nginx-container
         image: nginx
   replicas: 3
+
+  #kubectl scale ReplicationController myapp-rc --replicas=0
+                  # kind                #name in metadata

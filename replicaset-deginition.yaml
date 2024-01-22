@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 3
+  
+  template:
+    metadata: 
+      name: nginx
+      labels:
+        app: myapp
+    spec: 
+      containers:
+      - name: nginx
+        image: nginx
+  
+# kubectl scale replicaset myapp-replicaset --replicas=0
+                #kind         #name in metadata

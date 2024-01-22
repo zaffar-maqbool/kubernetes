@@ -3,10 +3,10 @@ kind: Pod
 metadata: 
   name: nginx
   labels:
-    env: prodduction
+    env: production
 spec:
   containers:
-    - name: nginx-name
-      image: nginx
+  - name: nginx-name
+    image: nginx
 
   
